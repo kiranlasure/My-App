@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ChildComponent implements OnInit {
 
+  @Input() boxColor;
+  @Input() placeHoldertext;
+  // It is Two Binding. write Here using @Input and use this at
+  // a time of Selector of child component.
+  // we handle this outside this component.
   constructor() { }
 
   ngOnInit() {

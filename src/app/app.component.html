@@ -43,5 +43,16 @@
 
 <h2>Child</h2>
 <hr>
-<app-child></app-child>
+<div fxLayout="row" fxLayoutGap="15px">
+<div fxFlex="50">
+  <!-- We handle here @Input properties. which are written using 
+  @Input Decorator -->
+<app-child [boxColor]="'red'" [placeHoldertext]="'create user'"></app-child>  
+</div>
+<div fxFlex="50">
+<app-child [boxColor]="'green'" [placeHoldertext]="'Create Admin'"></app-child>  
+</div>
+</div>
+
+
 <!-- The Hr tag is used to add a single in a div -->

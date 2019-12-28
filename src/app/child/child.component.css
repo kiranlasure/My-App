@@ -26,3 +26,11 @@ button{
   font-size: 17px;
   text-align: left;
 }
+.boxRed{
+background: #aa8d8d;
+border-radius: #ca4343;
+}
+.boxGreen{
+  background: #7ebe90;
+  border-radius: #0f250f;
+}
