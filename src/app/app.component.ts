@@ -6,11 +6,17 @@ import { Component } from '@angular/core';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
-  user = [];
+  users = [];
+  admins = [];
   //  Empty array write karaycha & ji pn value data variable madhun yeil yeil ti 
   // array maddhe push karaycha
   pushUser(data)
   {
-      this.user.push(data);
+      this.users.push(data);
   }
+  pushadmins(data)
+  {
+      this.admins.push(data);
+  }
+  
 }

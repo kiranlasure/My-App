@@ -9,13 +9,9 @@
         <th>User Name</th> 
         <th class="removeLink">Remove</th>
       </tr>
-      <tr> 
-        <td>Kiran</td>
-        <td class="removeLink">Remove</td>
-      </tr>
-      <tr>
-        <td>Rahul</td>
-        <td class="removeLink">Remove</td>
+      <tr *ngFor ="let user of users; index as i"> 
+        <td>{{user}}</td>
+        <td class="removeLink" (click) = "onRemoveItem(i)">Remove</td>
       </tr>
 
     </table>
@@ -29,9 +25,12 @@
         <th>User Name</th> 
         <th class="removeLink">Remove</th>
       </tr>
-      <tr *ngIf = "let user of users"> 
-        <td>{{user}}</td>
-        <td class="removeLink">Remove</td>
+      <tr *ngFor= "let admin of admins; index as i"> 
+        <!-- index as i mention kelyavr apan particular index vr kam karu shakto -->
+        <td>{{admin}}</td>
+        <td class="removeLink" (click) = "onRemoveItem(i)">Remove</td>
+        <!-- Remove vr click kelyavr data delete zala pahije tyasathi 1 function lihayach  & konta data 
+        particular index cha tyasathi ngfor maddhe index as i mention karayach -->
       </tr>
     </table>
   </div>
@@ -48,7 +47,10 @@
            
 </div>
 <div fxFlex="50">
-<app-child [boxColor]="'green'" [placeHoldertext]="'Create Admin'"></app-child>  
+<app-child 
+          [boxColor]="'green'" 
+          [placeHoldertext]="'Create Admin'"
+          (inputEvent)="pushadmins($event)"></app-child>  
 </div>
 </div>
 
