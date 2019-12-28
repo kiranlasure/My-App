@@ -6,7 +6,8 @@
   <div fxFlex="30">
      <button (click) = "onCreate()">Create</button>
   </div>
-   <div fxFlex="30" class="count">
+  <!-- if count value increease by one then show it else not -->
+   <div fxFlex="30" class="count" *ngIf="count">
      Total Count: <strong>{{count}}</strong>
    </div>
    
