@@ -1,4 +1,4 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit,Input ,Output, EventEmitter} from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -10,6 +10,11 @@ export class ChildComponent implements OnInit {
   @Input() boxColor;
   @Input() placeHoldertext;
   count:number = 0;
+  @Output() inputEvent = new EventEmitter();
+
+  // This is child componet & we want to add item into parent componet from this component.
+  // Then we can use EventEmitter to emit some value to parent Component\
+  // Input & Output are decorator
   constructor() { }
 
   ngOnInit() {
@@ -20,9 +25,7 @@ export class ChildComponent implements OnInit {
     {      
     this.count=this.count+1;
     alert(inpval.value);
-    }
-    // iNPUT vARIable maddhe kahi asel trch alrt karayach & Count chi value vadhvayachi nahitr nahi
-   
+    }   
   }
   
 }
