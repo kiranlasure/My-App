@@ -6,17 +6,26 @@ import { Component } from '@angular/core';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
+
   users = [];
-  admins = [];
-  //  Empty array write karaycha & ji pn value data variable madhun yeil yeil ti 
-  // array maddhe push karaycha
   pushUser(data)
   {
       this.users.push(data);
   }
+  onRemoveUsers(item)
+  {
+    this.users.splice(item,1);
+  }
+
+  admins = [];
   pushadmins(data)
   {
       this.admins.push(data);
   }
-  
+  onRemoveAdmin(item)
+  {
+    this.admins.splice(item,1);
+  }
+  // here we get 1 item and delete it using splice method. 
+  // It takes number of items item and delete it from the array6
 }
