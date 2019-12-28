@@ -17,9 +17,8 @@ export class ChildComponent implements OnInit {
   onCreate(inpval)
   {
     this.count=this.count+1;
-    alert(inpval.val);
-    // It will show the input box value........
+    alert(inpval.value);
+    // Ji pn value apnan Text box maddhe add karu ti ethe render hoil.
   }
-  // It means whenever Function call the value of the count will be increses by one.
-
+  
 }
