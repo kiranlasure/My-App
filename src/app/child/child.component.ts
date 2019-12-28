@@ -16,9 +16,13 @@ export class ChildComponent implements OnInit {
   }
   onCreate(inpval)
   {
+    if(inpval.value.length>0)
+    {      
     this.count=this.count+1;
     alert(inpval.value);
-    // Ji pn value apnan Text box maddhe add karu ti ethe render hoil.
+    }
+    // iNPUT vARIable maddhe kahi asel trch alrt karayach & Count chi value vadhvayachi nahitr nahi
+   
   }
   
 }
