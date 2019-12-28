@@ -1,10 +1,13 @@
 <h2>Parent</h2>
-<div fxLayout = "row">
+<div fxLayout = "row" fxLayoutGap = "7px">
+<!-- Using flex row property we set your div in row format -->
+<!-- Making FxlayoutGap we give some Gap in Two or more div's Dive -->
+
   <div fxLayout = "column" class="parentBox">
     <h2>User</h2>
 
     
-    <table>
+    <table width="100%">
       <tr>
         <th>User Name</th> 
         <th class="removeLink">Remove</th>
@@ -20,4 +23,24 @@
 
     </table>
   </div>
-</div>
+
+
+<div fxLayout = "column" class="parentBox">
+    <h2>Admin</h2>
+    <table width="100%">
+      <tr>
+        <th>User Name</th> 
+        <th class="removeLink">Remove</th>
+      </tr>
+      <tr> 
+        <td>Kiran</td>
+        <td class="removeLink">Remove</td>
+      </tr>
+      <tr>
+        <td>Rahul</td>
+        <td class="removeLink">Remove</td>
+      </tr>
+
+    </table>
+  </div>
+  </div>
