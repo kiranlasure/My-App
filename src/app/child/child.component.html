@@ -1,18 +1,13 @@
 
 <div fxLayout = "column" class="box" [ngClass]="{boxRed:boxColor =='red',boxGreen:boxColor=='green'}" fxLayoutGap="5px">
-
-  <!-- The Meaning of above line is
-  suppose property is equal red then apply boxRed ngClass
-  and if green property then green box is selected
-  it's called proprty binding-->
   <div fxFlex="30">
        <input type="text" placeholder="{{placeHoldertext}}">
   </div>
   <div fxFlex="30">
-     <button type="button">Create</button>
+     <button (click) = "onCreate()">Create</button>
   </div>
    <div fxFlex="30" class="count">
-     Total Count: <strong>2</strong>
+     Total Count: <strong>{{count}}</strong>
    </div>
    
 </div>

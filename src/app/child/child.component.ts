@@ -9,13 +9,15 @@ export class ChildComponent implements OnInit {
 
   @Input() boxColor;
   @Input() placeHoldertext;
-  // It is Two Binding. write Here using @Input and use this at
-  // a time of Selector of child component.
-  // we handle this outside this component.
-  // It's very imp.feature
+  count:number = 0;
   constructor() { }
 
   ngOnInit() {
   }
+  onCreate()
+  {
+    this.count=this.count+1;
+  }
+  // It means whenever Function call the value of the count will be increses by one.
 
 }
