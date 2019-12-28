@@ -12,6 +12,7 @@ export class ChildComponent implements OnInit {
   // It is Two Binding. write Here using @Input and use this at
   // a time of Selector of child component.
   // we handle this outside this component.
+  // It's very imp.feature
   constructor() { }
 
   ngOnInit() {
