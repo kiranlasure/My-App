@@ -12,9 +12,6 @@ export class ChildComponent implements OnInit {
   count:number = 0;
   @Output() inputEvent = new EventEmitter();
 
-  // This is child componet & we want to add item into parent componet from this component.
-  // Then we can use EventEmitter to emit some value to parent Component\
-  // Input & Output are decorator
   constructor() { }
 
   ngOnInit() {
@@ -24,7 +21,9 @@ export class ChildComponent implements OnInit {
     if(inpval.value.length>0)
     {      
     this.count=this.count+1;
-    alert(inpval.value);
+    this.inputEvent.emit(inpval.value);
+    // EventEmitter 1 component chi value dusrya component la pass karayachi trch ise krta.
+    // Text field chi value dusrya component la pathvaychi.
     }   
   }
   
