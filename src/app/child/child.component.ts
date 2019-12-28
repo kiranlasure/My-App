@@ -22,8 +22,6 @@ export class ChildComponent implements OnInit {
     {      
     this.count=this.count+1;
     this.inputEvent.emit(inpval.value);
-    // EventEmitter 1 component chi value dusrya component la pass karayachi trch ise krta.
-    // Text field chi value dusrya component la pathvaychi.
     }   
   }
   
