@@ -6,7 +6,7 @@
        <input type="text" #myinput placeholder="{{placeHoldertext}}">
   </div>
   <div fxFlex="30">
-     <button (click) = "onCreate()">Create</button>
+     <button (click) = "onCreate(myinput)">Create</button>
   </div>
 
    <div fxFlex="30" class="count" *ngIf="count">

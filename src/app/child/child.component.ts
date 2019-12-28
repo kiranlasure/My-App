@@ -14,9 +14,11 @@ export class ChildComponent implements OnInit {
 
   ngOnInit() {
   }
-  onCreate()
+  onCreate(inpval)
   {
     this.count=this.count+1;
+    alert(inpval.val);
+    // It will show the input box value........
   }
   // It means whenever Function call the value of the count will be increses by one.
 
