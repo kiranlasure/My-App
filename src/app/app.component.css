@@ -9,7 +9,25 @@ p {
   border-radius: 5px;
 }
 
-/* Like this we give stylesheet to inner element from the div */
+
 .parentBox h2{
   color: #0a5f0e;
+  font-size: 42px;
+  margin: 0;
+  padding: 0;
+}
+
+.parentBox table{
+  font-size: 30px;
+  text-align: left;
+
+  /* text align-left takes a text to left in given div. */
+
+}
+.removeLink
+{
+  color: #a71010;
+}
+.parentBox table th{
+  background: #dfcbcb;
 }
