@@ -1,3 +1,10 @@
 p {
   font-family: Lato;
 }
+.parentBox{
+  background: #f1e0e0;
+  border: 1px solid #252222;
+
+  /* If we use flexBox then rememer always that give width 100% */
+  width: 100%;
+}
