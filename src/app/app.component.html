@@ -29,12 +29,8 @@
         <th>User Name</th> 
         <th class="removeLink">Remove</th>
       </tr>
-      <tr> 
-        <td>Kiran</td>
-        <td class="removeLink">Remove</td>
-      </tr>
-      <tr>
-        <td>Rahul</td>
+      <tr *ngIf = "let user of users"> 
+        <td>{{user}}</td>
         <td class="removeLink">Remove</td>
       </tr>
     </table>
@@ -45,9 +41,14 @@
 <hr>
 <div fxLayout="row" fxLayoutGap="15px">
 <div fxFlex="50">
-  <!-- We handle here @Input properties. which are written using 
-  @Input Decorator n -->
-<app-child [boxColor]="'red'" [placeHoldertext]="'create user'"></app-child>  
+  
+<app-child [boxColor]="'red'"
+           [placeHoldertext]="'create user'"
+           (inputEvent)="pushUser($event)"></app-child>  
+           <!-- Event binding () maddhe Output event ch nav
+           bracket maddhe parent maddhe jo event lihaycha tyach nav.
+           Then () $event -It means Ji value get krto ti ethe yete
+            -->
 </div>
 <div fxFlex="50">
 <app-child [boxColor]="'green'" [placeHoldertext]="'Create Admin'"></app-child>  
