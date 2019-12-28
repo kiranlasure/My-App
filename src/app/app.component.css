@@ -4,7 +4,12 @@ p {
 .parentBox{
   background: #f1e0e0;
   border: 1px solid #252222;
-
-  /* If we use flexBox then rememer always that give width 100% */
   width: 100%;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+/* Like this we give stylesheet to inner element from the div */
+.parentBox h2{
+  color: #0a5f0e;
 }
